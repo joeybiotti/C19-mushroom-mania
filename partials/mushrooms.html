@@ -2,18 +2,16 @@
   <header>
     <h1>Types of Mushrooms</h1>
     <section>
-      <input ng-model="query" ng-model="myVar" placeholder="Search" />
+      <input type="text" ng-model="query" placeholder="Search" />
       <br />
-      <input type="radio" ng-model="myVar" value="poisonous" />Poisonous
+      <input type="radio" ng-model="filter" value="poisonous" />Poisonous
       <br />
-      <input type="radio" value="non-poisonous" />Non-poisonous
+      <input type="radio" ng-model="filter" value="non-poisonous" />Non-poisonous
       <hr />
       <div ng-repeat="item in mushrooms">
         <h2>{{item.name}}</h2>
         <p>{{item.description}}</p>
-
-        <!-- need to run an if statement here to filter radio btns-->
-        
+      <hr />
       </div>
     </section>
   </header>
